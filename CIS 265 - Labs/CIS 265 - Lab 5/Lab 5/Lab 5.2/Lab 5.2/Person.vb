@@ -1,9 +1,9 @@
 ﻿'question 1 
 Public Class Person
 
-    Protected _first, _last As String
+    Private _first, _last As String
 
-    Protected _birthday As DateTime
+    Private _birthday As DateTime
 
     Public Sub New(first As String, last As String, birth As DateTime)
         _first = first

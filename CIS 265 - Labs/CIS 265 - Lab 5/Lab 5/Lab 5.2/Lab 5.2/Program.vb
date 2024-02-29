@@ -1,6 +1,6 @@
 Imports System
-'Blessing Abumere CIS 265 Lab 5' 
-
+'Blessing Abumere
+'CIS 265 Lab 5 part 2' 
 
 Module Program
 
@@ -61,15 +61,17 @@ Module Program
 
         Dim Students As New List(Of Student)
 
+        'Dim test = New Student("first", "last", "2/28/2024", 203, "Year 2", 3, "6/2/2024")
         'question 3'
         For i As Integer = 1 To 5
             Students.Add(Input_Student())
+            Console.WriteLine()
         Next
 
         'question 4'
         GPA_Filter(Students)
 
-        'todo check if protected or private changes anything for person.vb 
+
 
     End Sub
 End Module
