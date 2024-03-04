@@ -6,8 +6,8 @@ Public Class Person
     Private _birthday As DateTime
 
     Public Sub New(first As String, last As String, birth As DateTime)
-        _first = first
-        _last = last
+        Me._first = first
+        Me._last = last
         Me._birthday = birth
     End Sub
 
