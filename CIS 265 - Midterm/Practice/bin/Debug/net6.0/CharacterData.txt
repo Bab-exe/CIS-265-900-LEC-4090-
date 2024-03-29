@@ -1,0 +1,12 @@
+Name: Bandit
+Class: Rogue
+Hit Points: 350
+Attack Damage: 75
+Attack Range: 15
+
+Name: Thief
+Class: Rogue
+Hit Points: 200
+Attack Damage: 65
+Attack Range: 20
+

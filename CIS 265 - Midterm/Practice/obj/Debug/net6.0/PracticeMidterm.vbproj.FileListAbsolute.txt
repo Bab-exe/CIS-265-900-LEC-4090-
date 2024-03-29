@@ -1,0 +1,14 @@
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\bin\Debug\net6.0\PracticeMidterm.exe
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\bin\Debug\net6.0\PracticeMidterm.deps.json
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\bin\Debug\net6.0\PracticeMidterm.runtimeconfig.json
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\bin\Debug\net6.0\PracticeMidterm.dll
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\bin\Debug\net6.0\PracticeMidterm.pdb
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\PracticeMidterm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\PracticeMidterm.AssemblyInfoInputs.cache
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\PracticeMidterm.AssemblyInfo.vb
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\PracticeMidterm.vbproj.CoreCompileInputs.cache
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\PracticeMidterm.dll
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\refint\PracticeMidterm.dll
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\PracticeMidterm.pdb
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\PracticeMidterm.genruntimeconfig.cache
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Midterm\Practice\obj\Debug\net6.0\ref\PracticeMidterm.dll
