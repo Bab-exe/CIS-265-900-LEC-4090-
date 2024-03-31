@@ -12,144 +12,233 @@
 
 
 Public Class Device
+    'a)	The parent class is called Device and has the following fields: Brand (string), Model (string), Operating System (string), IP Address, and MAC address (string).
+    Private ReadOnly Brand, Model, OS, IP_Address, MAC_Address As String
 
-    Private _Brand, _Model, _OS, _IP_Address, _MAC_Address As String
-
-    '-_-'
-    Public ReadOnly Property Brand As String
-        Get
-            Return _Brand
-        End Get
-    End Property
-
-    Public ReadOnly Property Model As String
-        Get
-            Return _Model
-        End Get
-    End Property
-
-    Public ReadOnly Property OS As String
-        Get
-            Return _OS
-        End Get
-    End Property
-
-    Public ReadOnly Property IP_Address As String
-        Get
-            Return _IP_Address
-        End Get
-    End Property
-
-    Public ReadOnly Property MAC_Address As String
-        Get
-            Return _MAC_Address
-        End Get
-    End Property
-
-
-
-
-    Sub New(__brand As String, __model As String, __os As String, __ip As String, __mac As String)
-        _Brand = __brand
-        _Model = __model
-        _OS = __os
-        _IP_Address = __ip
-        _MAC_Address = __mac
-    End Sub
+    'nest = no getters and setters 
 
     Sub New()
     End Sub
 
+    Sub New(__brand As String, __model As String, __os As String, __ip As String, __mac As String)
+        Brand = __brand
+        Model = __model
+        OS = __os
+        IP_Address = __ip
+        MAC_Address = __mac
+    End Sub
 
     Public Overrides Function ToString() As String
-
 
         Return $"Brand: {Brand}
 Model: {Model} 
 Operating System: {OS}
 IP Address: {IP_Address}
-MAC Address: {MAC_Address}
-
-"
+MAC Address: {MAC_Address}"
     End Function
 
 
 
+    'Device.Computer
+    'b)	Computer will have one additional field: ISP (string) which represents the internet service provider.
+    Public Class Computer
+        Inherits Device 'for some reason nesting doesnt do this by default
 
-End Class
+        Private ReadOnly ISP As String
 
-'Computer
-Public Class Computer
+        Sub New(_brand As String, _model As String, _os As String, _ip As String, _mac As String, __isp As String)
+            MyBase.New(_brand, _model, _os, _ip, _mac) 'Device
 
-    Inherits Device
+            ISP = __isp
+        End Sub
 
-    Private _ISP As String
-    Public ReadOnly Property ISP As String
-        Get
-            Return _ISP
-        End Get
-    End Property
+        'same as above but with device parameter
+        Sub New(_Device As Device, __isp As String)
+            MyClass.New(_Device.Brand, _Device.Model, _Device.OS, _Device.IP_Address, _Device.MAC_Address, __isp)
 
-    Sub New(_brand As String, _model As String, _os As String, _ip As String, _mac As String, __isp As String)
+        End Sub
 
-        MyBase.New(_brand, _model, _os, _ip, _mac)
+        Sub New()
+        End Sub
 
-        _ISP = __isp
-    End Sub
-
-
-    Sub New(_Device As Device, __isp As String)
-        MyBase.New(_Device.Brand, _Device.Model, _Device.OS, _Device.IP_Address, _Device.MAC_Address)
-
-        _ISP = __isp
-    End Sub
-
-    Public Function ToString() As String
-        Return $"{MyBase.ToString()}
+        Public Overrides Function ToString() As String
+            Return $"{MyBase.ToString()}
 ISP: {ISP}"
 
-    End Function
+        End Function
+
+        'd)	The two child classes of Computer are Desktop and Laptop.
+
+        'Device.Computer.Desktop'
+        'e)	Desktop has the following fields: Monitor (string), Keyboard (string), and Mouse (string). 
+        Public Class Desktop
+            Inherits Computer
+
+            Private ReadOnly Monitor, Keyboard, Mouse As String
+
+            Sub New()
+            End Sub
+
+            Sub New(_brand As String, _model As String, _os As String, _ip As String, _mac As String, _isp As String, _monitor As String, _keyboard As String, _mouse As String)
+                MyBase.New(_brand, _model, _os, _ip, _mac, _isp) 'computer
+
+                Monitor = _monitor
+                Keyboard = _keyboard
+                Mouse = _mouse
+
+            End Sub
+
+            'same as above but computer param
+            Sub New(Computer As Computer, _monitor As String, _keyboard As String, _mouse As String)
+
+                MyClass.New(Computer.Brand, Computer.Model, Computer.OS, Computer.IP_Address, Computer.MAC_Address, Computer.ISP, _monitor, _keyboard, _mouse)
+            End Sub
+
+
+            Public Overrides Function toString() As String
+                Return $"{MyBase.ToString()}
+Monitor: {Monitor}
+Keyboard: {Keyboard}
+Mouse: {Mouse}"
+            End Function
+
+        End Class
 
 
 
-    'Computer.Desktop'
-    Public Class Desktop
+
+        'Device.Computer.Laptop
+        Public Class Laptop
+            Inherits Computer
+
+            Private ReadOnly ScreenSize As Double
+            Private ReadOnly TouchScreen As Boolean
+
+            Sub New()
+            End Sub
+
+            Sub New(_brand As String, _model As String, _os As String, _ip As String, _mac As String, __isp As String, _screensize As Double, _touchscreen As Boolean)
+
+                MyBase.New(_brand, _model, _os, _ip, _mac, __isp) 'Device.Computer
+
+                ScreenSize = _screensize
+                TouchScreen = _touchscreen
+
+            End Sub
+
+            'same as above but computer param
+            Sub New(Computer As Computer, _screenSize As Double, _touchScreen As Boolean)
+
+                MyClass.New(Computer.Brand, Computer.Model, Computer.OS, Computer.IP_Address, Computer.MAC_Address, Computer.ISP, _screenSize, _touchScreen)
+            End Sub
+
+
+            Public Overrides Function ToString() As String
+                Return $"{MyBase.ToString()}
+Screen Size: {ScreenSize}
+Touch Screen: {TouchScreen}"
+
+            End Function
+
+        End Class
 
     End Class
 
 
-    'Computer.Laptop
-    Public Class Laptop
 
-        Private ScreenSize As Double
-        Private TouchScreen As Boolean
+    'Device.Mobile
+    'c)	Mobile will have two additional fields: WirelessProvider (string) and CellNetwork (string).
+    Public Class Mobile
+        Inherits Device
 
+        Private ReadOnly WirelessProvider, CellNetwork As String
 
-        Sub New(_screenSize As Double, _touchScreen As Boolean)
-
-            ScreenSize = _screenSize
-            TouchScreen = _touchScreen
+        Sub New()
         End Sub
+
+        Sub New(brand As String, model As String, os As String, ip As String, mac As String, _wirelessProvider As String, _cellNetwork As String)
+            MyBase.New(brand, model, os, ip, mac) 'device
+
+            WirelessProvider = _wirelessProvider
+            CellNetwork = _cellNetwork
+        End Sub
+
+        'device as parame
+        Sub New(Device As Device, wirelessprovider As String, cellnetwork As String)
+            MyClass.New(Device.Brand, Device.Model, Device.OS, Device.IP_Address, Device.MAC_Address, wirelessprovider, cellnetwork) 'above constructor
+
+        End Sub
+
+        Public Overrides Function ToString() As String
+            Return $"{MyBase.ToString()}
+Wireless Provider: {WirelessProvider}
+Cell Network: {CellNetwork}"
+
+        End Function
+
+        'g)	The two child classes of Mobile are SmartPhone and Tablet.
+
+        'Device.Mobile.SmartPhone
+        'h)	SmartPhone will have a field named PhoneNumber (string).
+        Public Class SmartPhone
+            Inherits Mobile
+
+            Private ReadOnly PhoneNumber As String
+
+            Sub New()
+            End Sub
+
+            Sub New(brand As String, model As String, os As String, ip As String, mac As String, wirelessprovider As String, cellnetwork As String, _phonenumber As String)
+                MyBase.New(brand, model, os, ip, mac, wirelessprovider, cellnetwork) 'mobile
+
+                PhoneNumber = _phonenumber
+            End Sub
+
+            Sub New(Mobile As Mobile, _phonenumber As String)
+                MyClass.New(Mobile.Brand, Mobile.Model, Mobile.OS, Mobile.IP_Address, Mobile.MAC_Address, Mobile.WirelessProvider, Mobile.CellNetwork, _phonenumber)
+            End Sub
+
+            Public Overrides Function toString() As String
+                Return $"{MyBase.ToString()}
+Phone Number: {PhoneNumber}"
+
+            End Function
+
+        End Class
+
+
+        'Device.Mobile.Tablet
+        'i)	Tablet will have a field named VoIPApp (string)
+        Public Class Tablet
+            Inherits Mobile
+
+            Private ReadOnly VoIPApp As String
+
+            Sub New()
+            End Sub
+
+            Sub New(brand As String, model As String, os As String, ip As String, mac As String, wirelessprovider As String, cellnetwork As String, _voipapp As String)
+                MyBase.New(brand, model, os, ip, mac, wirelessprovider, cellnetwork) 'mobile
+
+                VoIPApp = _voipapp
+            End Sub
+
+            Sub New(Mobile As Mobile, voipapp As String)
+                MyClass.New(Mobile.Brand, Mobile.Model, Mobile.OS, Mobile.IP_Address, Mobile.MAC_Address, Mobile.WirelessProvider, Mobile.CellNetwork, voipapp)
+
+                'same as above but mobile param
+            End Sub
+
+            Public Overrides Function toString() As String
+                Return $"{MyBase.ToString()}
+Voice over IP App: {VoIPApp}"
+            End Function
+
+        End Class
+
     End Class
 
 End Class
 
 
-'Device.Mobile
-'Public Class Mobile
 
-
-'    Private WirelessProvider, CellNetwork As String
-
-'    'Mobile.SmartPhone
-'    Public Class SmartPhone
-
-'    End Class
-
-
-'    'Mobile.Tablet
-'    Public Class Tablet
-
-'    End Class
-
-'End Class
