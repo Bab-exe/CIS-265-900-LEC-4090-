@@ -52,11 +52,7 @@ MAC Address: {MAC_Address}"
             ISP = __isp
         End Sub
 
-        'same as above but with device parameter
-        Sub New(_Device As Device, __isp As String)
-            MyClass.New(_Device.Brand, _Device.Model, _Device.OS, _Device.IP_Address, _Device.MAC_Address, __isp)
 
-        End Sub
 
         Sub New()
         End Sub
@@ -163,12 +159,6 @@ Touch Screen: {TouchScreen}"
             CellNetwork = _cellNetwork
         End Sub
 
-        'device as parame
-        Sub New(Device As Device, wirelessprovider As String, cellnetwork As String)
-            MyClass.New(Device.Brand, Device.Model, Device.OS, Device.IP_Address, Device.MAC_Address, wirelessprovider, cellnetwork) 'above constructor
-
-        End Sub
-
         Public Overrides Function ToString() As String
             Return $"{MyBase.ToString()}
 Wireless Provider: {WirelessProvider}
@@ -194,6 +184,7 @@ Cell Network: {CellNetwork}"
                 PhoneNumber = _phonenumber
             End Sub
 
+            'object as parameter ;uses above
             Sub New(Mobile As Mobile, _phonenumber As String)
                 MyClass.New(Mobile.Brand, Mobile.Model, Mobile.OS, Mobile.IP_Address, Mobile.MAC_Address, Mobile.WirelessProvider, Mobile.CellNetwork, _phonenumber)
             End Sub
@@ -223,10 +214,11 @@ Phone Number: {PhoneNumber}"
                 VoIPApp = _voipapp
             End Sub
 
+            'same as above but mobile param
             Sub New(Mobile As Mobile, voipapp As String)
                 MyClass.New(Mobile.Brand, Mobile.Model, Mobile.OS, Mobile.IP_Address, Mobile.MAC_Address, Mobile.WirelessProvider, Mobile.CellNetwork, voipapp)
 
-                'same as above but mobile param
+
             End Sub
 
             Public Overrides Function toString() As String

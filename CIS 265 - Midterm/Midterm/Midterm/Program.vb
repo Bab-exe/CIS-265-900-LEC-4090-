@@ -4,8 +4,25 @@
 Imports System.IO
 
 Module Program
+    'for some level of customization
+
+    'filepath + filename for each
+    Structure FilePath
+        'folder name
+        Const folder = "Device Order Files" & "\" 'folder name + \
 
 
+        'folder + filename = filepath for each
+        Const Desktop = folder & "Desktop Orders.txt"
+        Const Laptop = folder & "Laptop Orders.txt"
+        Const SmartPhone = folder & "SmartPhone Orders.txt"
+        Const Tablet = folder & "Tablet Orders.txt"
+
+        Const Totals As String = folder & "Totals Receipt.txt"
+
+    End Structure
+
+    'Pricing
     '5.	Desktops cost $2000. Laptops cost $800. Smartphones cost $600. Tablets cost $450. 
     Enum Price
         Desktop = 2000
@@ -16,51 +33,39 @@ Module Program
     End Enum
 
 
-
-
-
-
     Sub Main(args As String())
-        Dim random As New Generate()
+        Dim random As New Generate() 'generate random objects
 
         Dim Device_List As New List(Of Device) 'question 7
 
-
-        Dim Laptop_Count = 0, Desktop_Count = 0, Smartphone_Count = 0, Tablet_Count = 0 'for counts
+        Dim Laptop_Count = 0, Desktop_Count = 0, Smartphone_Count = 0, Tablet_Count = 0 'for counts and calculating grand total
         Dim Desktop_Receipt, Laptop_Receipt, Smartphone_Receipt, Tablet_Receipt As New List(Of String) 'for file writing
 
-
         Dim Choice, Order_Amount As Integer 'for choices
-        Dim Grand_Total As Double = 0
-        Dim Cost As Double
 
-        'For Filewriting, the file names will just the classnames of each using classname() Exalple "Desktop Orders.txt"
-        Dim dir As String = $"{Environment.CurrentDirectory}\Device Order Files"
-        Const folder As String = "Device Order Files\"
+        'directory 
+        Dim dir As String = Environment.CurrentDirectory & "\" & FilePath.folder
 
-        Dim FilePath As New Dictionary(Of String, String) From {
-            {"Desktop", folder & "Desktop Orders.txt"}, 'desktop path
-            {"Laptop", folder & "Laptop Orders.txt"}, 'laptop path
-            {"SmartPhone", folder & "SmartPhone Orders.txt"}, 'smartphone path
-            {"Tablet", folder & "Tablet Orders.txt"}, 'tablet path
-            {"Totals", folder & "Totals Receipt.txt"} 'totals
-        } 'for file writing
+        'to Delete all the files for new data
+        If Directory.Exists(dir) Then
+            Directory.Delete(dir, True)
+            Directory.CreateDirectory(dir)
 
 
+        Else
+
+            Directory.CreateDirectory(dir)
+        End If
 
 
 
-        Directory.Delete(dir, True) 'to Delete all the files On start 
-        Directory.CreateDirectory(dir)
 
-
-        Console.WriteLine("
+        Console.WriteLine(
+            "
 ====================================
           Device Order Page
 ====================================
-"
-                          )
-
+")
 
 
         'User Input question 4 -  10
@@ -89,88 +94,94 @@ Module Program
             Console.ForegroundColor = ConsoleColor.Cyan
 
 
-            'determines  the cost
+            'determines message and sets choice to price
+
             Select Case Choice
 
                 Case 1  'desktop
-                    Cost = Price.Desktop
+                    Choice = Price.Desktop
                     Console.WriteLine("How Many Desktops would you like to order?")
                     Console.Title = "Desktop Amount"
 
                 Case 2 'laptop'
-                    Cost = Price.Laptop
+                    Choice = Price.Laptop
                     Console.WriteLine("How Many Laptops would you like to order?")
                     Console.Title = "Laptop Amount"
 
 
                 Case 3 'smartphone'
-                    Cost = Price.Smartphone
+                    Choice = Price.Smartphone
                     Console.WriteLine("How Many Smartphones would you like to order?")
                     Console.Title = "Smartphone Amount"
 
                 Case 4 'tablet'
-                    Cost = Price.Tablet
+                    Choice = Price.Tablet
                     Console.WriteLine("How Many Tablets would you like to order?")
                     Console.Title = "Tablet Amount"
 
 
                 Case 5 'Complete Order' ends loop runs 1x
 
-                    Dim Desktop_Subtotal = (Desktop_Count * Price.Desktop).ToString("C")
-                    Dim Laptop_Subtotal = (Laptop_Count * Price.Laptop).ToString("C")
-                    Dim Smartphone_Subtotal = (Smartphone_Count * Price.Smartphone).ToString("C")
-                    Dim Tablet_Subtotal = (Tablet_Count * Price.Tablet).ToString("C")
 
-                    'Desktops: Count (Cost * Price)
-                    Dim Totals As String() = {
-                        $"Desktops: {Desktop_Count}  ({Desktop_Subtotal})",
-                        $"Laptops: {Laptop_Count}  ({Laptop_Subtotal})",
-                        $"Smartphones: {Smartphone_Count}  ({Smartphone_Subtotal})",
-                        $"Tablets: {Tablet_Count}  ({Tablet_Subtotal})",
-                        Environment.NewLine,
-                        "Grand Total: " & Grand_Total.ToString("C")
-                    }
+                    'sub totals are the amount of it multiplied by the set price
+                    Dim Desktop_Subtotal = (Desktop_Count * Price.Desktop)
+                    Dim Laptop_Subtotal = (Laptop_Count * Price.Laptop)
+                    Dim Smartphone_Subtotal = (Smartphone_Count * Price.Smartphone)
+                    Dim Tablet_Subtotal = (Tablet_Count * Price.Tablet)
 
+                    'grand total calc
+                    Dim Grand_Total As Decimal = Desktop_Subtotal + Laptop_Subtotal + Smartphone_Subtotal + Tablet_Subtotal
+
+
+
+                    'create totals string
+                    Dim Totals As String = $"
+Desktops: {Desktop_Count}  ({Desktop_Subtotal:c})
+Laptops: {Laptop_Count}  ({Laptop_Subtotal:c})
+Smartphones: {Smartphone_Count}  ({Smartphone_Subtotal:c})
+Tablets: {Tablet_Count}  ({Tablet_Subtotal:c})
+
+Grand Total: {Grand_Total:c}
+                    "
 
                     'Write to totals receipt
 
-                    File.WriteAllLines(FilePath("Totals"), Totals)
+                    File.WriteAllText(FilePath.Totals, Totals)
 
                     Console.ForegroundColor = ConsoleColor.Green
 
-                    Console.WriteLine("Your Order has been completed. Your grand total is " & Grand_Total.ToString("C"))
+                    Console.WriteLine("Your Order has been completed. Your grand total Is " & Grand_Total.ToString("C"))
 
                     'write to desktop receipt
                     Desktop_Receipt.Add($"
 Amount: {Desktop_Count}
-Subtotal: {Desktop_Subtotal}")
-                    File.AppendAllLines(FilePath("Desktop"), Desktop_Receipt)
+Subtotal: {Desktop_Subtotal.ToString("C")}")
+                    File.AppendAllLines(FilePath.Desktop, Desktop_Receipt)
 
                     'write to laptop receipt
                     Laptop_Receipt.Add($"
 Amount: {Laptop_Count}
-Subtotal: {Laptop_Subtotal}")
-                    File.AppendAllLines(FilePath("Laptop"), Laptop_Receipt)
+Subtotal: {Laptop_Subtotal.ToString("C")}")
+                    File.AppendAllLines(FilePath.Laptop, Laptop_Receipt)
 
-
-                    'write to smartphomne recepit 
+                    'write to smartphone receipt
                     Smartphone_Receipt.Add($"
 Amount: {Smartphone_Count}
-Subtotal: {Smartphone_Subtotal}")
-                    File.AppendAllLines(FilePath("SmartPhone"), Smartphone_Receipt)
+Subtotal: {Smartphone_Subtotal.ToString("C")}")
+                    File.AppendAllLines(FilePath.SmartPhone, Smartphone_Receipt)
 
                     'write to tablet receipt
                     Tablet_Receipt.Add($"
 Amount: {Tablet_Count}
-Subtotal: {Tablet_Subtotal}")
-                    File.AppendAllLines(FilePath("Tablet"), Tablet_Receipt)
+Subtotal: {Tablet_Subtotal.ToString("C")}")
+                    File.AppendAllLines(FilePath.Tablet, Tablet_Receipt)
 
                     Console.Title = "Finished"
                     Console.ResetColor()
 
                     Exit Do
 
-                Case Else 'error should skip adding to grand total
+                Case Else 'invalid
                     Console.ForegroundColor = ConsoleColor.Red
 
                     Console.WriteLine($"{Choice}? Invalid Choice. Please Try Again")
@@ -188,10 +199,9 @@ Subtotal: {Tablet_Subtotal}")
 
             Dim obj As Device
 
-
-            'counts and adding to the main list and file writing
+            'counts and adding to the main list 
             For i = 1 To Order_Amount
-                Select Case Cost 'add to list and decides correct filepath
+                Select Case Choice 'add to list and receipt
                     Case Price.Desktop
                         obj = random.Desktop_Object 'object
 
@@ -204,8 +214,6 @@ Subtotal: {Tablet_Subtotal}")
 
                         obj = random.Laptop_Object 'object
 
-
-
                         Device_List.Add(obj)
                         Laptop_Receipt.Add(obj.ToString & Environment.NewLine)
 
@@ -213,8 +221,6 @@ Subtotal: {Tablet_Subtotal}")
 
                     Case Price.Smartphone
                         obj = random.SmartPhone_Object 'object
-
-
 
                         Device_List.Add(obj)
 
@@ -232,13 +238,9 @@ Subtotal: {Tablet_Subtotal}")
 
                         Tablet_Count += 1
 
-                    Case Else
-                        Throw New Exception("Cost Variable Error: This Should never happen Check Cost var")
+                    Case Else 'it should always be one of the above values. if its not there is a programming problem
+                        Throw New Exception("Variable Error: This Should never happen Check var")
                 End Select
-
-                Grand_Total += Cost 'grand total calc
-
-
 
 
             Next
@@ -248,55 +250,44 @@ Subtotal: {Tablet_Subtotal}")
 
 
 
+        ''for testing
+        'Test_Output(Desktop_Receipt, Laptop_Receipt, Smartphone_Receipt, Tablet_Receipt, Grand_Total)
 
 
 
     End Sub
 
+    'for testing
+    Sub Test_Output(Desktop_Receipt As List(Of String), Laptop_Receipt As List(Of String), Smartphone_Receipt As List(Of String), Tablet_Receipt As List(Of String), Grand_Total As Double)
+        Console.ReadLine()
+        Console.Clear()
+        Console.ForegroundColor = ConsoleColor.Green
 
+        Console.Write("Per Desktop: $" & Price.Desktop)
+        Console.WriteLine(Desktop_Receipt.Last & Environment.NewLine)
+
+        Console.Write("Per Laptop: $" & Price.Laptop)
+        Console.WriteLine(Laptop_Receipt.Last & Environment.NewLine)
+
+        Console.Write("Per Smartphone: $" & Price.Smartphone)
+        Console.WriteLine(Smartphone_Receipt.Last & Environment.NewLine)
+
+        Console.Write("Per Tablet: $" & Price.Tablet)
+        Console.WriteLine(Tablet_Receipt.Last & Environment.NewLine & Environment.NewLine)
+
+        Console.ResetColor()
+
+        Console.WriteLine("Grand Total: " & Grand_Total.ToString("C"))
+
+
+    End Sub
 
 
     'for the random part
     Class Generate
         Private ReadOnly random As New Random()
-        Private Const Computer = 1
-        Private Const Mobile = 2
 
-        'Device specific data for computer and mobile Computer = 1, Mobile = 2
-        Public Function Device_Object(Device_Type As UShort) As Device
-            Dim Brand, OS As String 'depends on computer or mobile
-
-            'brand and os
-            Select Case Device_Type
-                Case Computer 'computer specific
-
-                    'brands: Acer, Dell, HP, Apple
-                    Dim Brand_List() As String = {"Acer", "Dell", "HP", "Apple"}
-                    Brand = Brand_List(random.Next(0, Brand_List.Length))
-
-                    'os:Windows, Linux, Unix, macOS
-                    Dim OS_List() As String = {"Windows", "Linux", "Unix", "macOS"}
-                    OS = OS_List(random.Next(0, OS_List.Length))
-
-                Case Mobile 'mobile specific 
-
-                    'brands :Samsung, Apple, Motorola, Google
-                    Dim Brand_List() As String = {"Samsung", "Apple", "Motorola", "Google"}
-                    Brand = Brand_List(random.Next(0, Brand_List.Length))
-
-                    'os: Android, iOS
-                    Dim OS_List() As String = {"Android", "iOS"}
-                    OS = OS_List(random.Next(0, OS_List.Length))
-
-                Case Else
-                    Throw New Exception("Not A Possible Type. Can only be 1(Computer) or 2(Mobile) ")
-
-            End Select
-
-            Return New Device(Brand, Model, OS, IP_Address, MAC_Address)
-        End Function
-
-        'Device Properties that arent dependent on type
+        'Device Properties that arent dependent on type ; Brand and OS cant be here
         Public ReadOnly Property Model As String
 
             Get
@@ -380,13 +371,19 @@ Subtotal: {Tablet_Subtotal}")
         End Property
 
 
-
-
         'Computer Specific
         'computer is just device + isp
         Public ReadOnly Property Computer_Object As Device.Computer
             Get
-                Return New Device.Computer(Device_Object(Computer), ISP)
+                'brands: Acer, Dell, HP, Apple
+                Dim Brand_List() As String = {"Acer", "Dell", "HP", "Apple"}
+                Dim Brand = Brand_List(random.Next(0, Brand_List.Length))
+
+                'os:Windows, Linux, Unix, macOS
+                Dim OS_List() As String = {"Windows", "Linux", "Unix", "macOS"}
+                Dim OS = OS_List(random.Next(0, OS_List.Length))
+
+                Return New Device.Computer(Brand, Model, OS, IP_Address, MAC_Address, ISP)
             End Get
         End Property
 
@@ -438,7 +435,15 @@ Subtotal: {Tablet_Subtotal}")
         'mobile is device + wireless + cellnetwork
         Public ReadOnly Property Mobile_Object As Device.Mobile
             Get
-                Return New Device.Mobile(Device_Object(Mobile), MyClass.WirelessProvider, MyClass.CellNetwork)
+                'brands :Samsung, Apple, Motorola, Google
+                Dim Brand_List() As String = {"Samsung", "Apple", "Motorola", "Google"}
+                Dim Brand = Brand_List(random.Next(0, Brand_List.Length))
+
+                'os: Android, iOS
+                Dim OS_List() As String = {"Android", "iOS"}
+                Dim OS = OS_List(random.Next(0, OS_List.Length))
+
+                Return New Device.Mobile(Brand, WirelessProvider, CellNetwork, IP_Address, MAC_Address, WirelessProvider, CellNetwork)
             End Get
         End Property
         Public ReadOnly Property WirelessProvider As String
@@ -500,5 +505,6 @@ Subtotal: {Tablet_Subtotal}")
             End Get
         End Property
     End Class
+
 
 End Module
