@@ -15,3 +15,4 @@ C:\Users\babum\Downloads\dump\Repository\CIS-265-900-LEC-4090-\CIS 265 - Labs\CI
 C:\Users\babum\Downloads\dump\Repository\CIS-265-900-LEC-4090-\CIS 265 - Labs\CIS 265 - Lab 8\Lab 8\Lab 8\obj\Debug\net8.0-windows\Lab 8.pdb
 C:\Users\babum\Downloads\dump\Repository\CIS-265-900-LEC-4090-\CIS 265 - Labs\CIS 265 - Lab 8\Lab 8\Lab 8\obj\Debug\net8.0-windows\Lab 8.genruntimeconfig.cache
 C:\Users\babum\Downloads\dump\Repository\CIS-265-900-LEC-4090-\CIS 265 - Labs\CIS 265 - Lab 8\Lab 8\Lab 8\obj\Debug\net8.0-windows\ref\Lab 8.dll
+C:\Users\babum\Downloads\dump\Repository\CIS-265-900-LEC-4090-\CIS 265 - Labs\CIS 265 - Lab 8\Lab 8\Lab 8\obj\Debug\net8.0-windows\Lab_8.Resources.resources
