@@ -55,7 +55,9 @@ Partial Class Form1
         ' 
         ' Startbtn
         ' 
-        Startbtn.BackColor = Color.Lime
+        Startbtn.BackColor = Color.DimGray
+        Startbtn.Cursor = Cursors.AppStarting
+        Startbtn.Enabled = False
         Startbtn.Font = New Font("Times New Roman", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Startbtn.Location = New Point(597, 3)
         Startbtn.Name = "Startbtn"
