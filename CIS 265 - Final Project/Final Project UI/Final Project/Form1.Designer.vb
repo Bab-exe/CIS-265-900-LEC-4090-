@@ -226,7 +226,7 @@ Partial Class Form1
         Controls.Add(Device_Panel)
         Controls.Add(Database_Panel)
         Name = "Form1"
-        Text = "Form1"
+        Text = "Final Project"
         Database_Panel.ResumeLayout(False)
         Database_Panel.PerformLayout()
         Device_Groupbox.ResumeLayout(False)

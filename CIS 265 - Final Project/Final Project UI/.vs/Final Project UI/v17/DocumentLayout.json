@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|c:\\users\\babum\\downloads\\github cis 265\\cis 265 - final project\\final project ui\\final project\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|c:\\users\\babum\\downloads\\github cis 265\\cis 265 - final project\\final project ui\\final project\\device.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|solutionrelative:final project\\device.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\final project\\device_database.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|solutionrelative:final project\\device_database.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\final project\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|solutionrelative:final project\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\final project\\generate.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|solutionrelative:final project\\generate.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5FE6EB3-6278-45D0-A659-20B7F99D1047}|Final Project\\Final Project.vbproj|C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\final project\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -18,24 +30,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Device_Database.vb",
+              "DocumentMoniker": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Device_Database.vb",
+              "RelativeDocumentMoniker": "Final Project\\Device_Database.vb",
+              "ToolTip": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Device_Database.vb",
+              "RelativeToolTip": "Final Project\\Device_Database.vb",
+              "ViewState": "AQIAAGAAAAAAAMAhTEwwwHEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-16T17:07:11.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Generate.vb",
+              "DocumentMoniker": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Generate.vb",
+              "RelativeDocumentMoniker": "Final Project\\Generate.vb",
+              "ToolTip": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Generate.vb",
+              "RelativeToolTip": "Final Project\\Generate.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-21T16:20:31.715Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Device.vb",
+              "DocumentMoniker": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Device.vb",
+              "RelativeDocumentMoniker": "Final Project\\Device.vb",
+              "ToolTip": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Device.vb",
+              "RelativeToolTip": "Final Project\\Device.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-21T15:59:25.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Form1.vb",
               "RelativeDocumentMoniker": "Final Project\\Form1.vb",
               "ToolTip": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Form1.vb",
               "RelativeToolTip": "Final Project\\Form1.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "ViewState": "AQIAAF4AAAAAAIC0PFEkwGYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-05-14T02:37:51.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T02:37:51.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Form1.vb",
               "RelativeDocumentMoniker": "Final Project\\Form1.vb",
