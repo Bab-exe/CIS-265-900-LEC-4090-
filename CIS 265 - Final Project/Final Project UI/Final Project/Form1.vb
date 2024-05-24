@@ -9,8 +9,6 @@ Public Class Form1
         'extra'
         ToolTip.InitialDelay = 100
 
-
-
         'The database text box should not be editable.
         Database_Output.ReadOnly = True
 
@@ -40,6 +38,9 @@ Public Class Form1
         FileDialog.FileName = "Final Database"
         FileDialog.InitialDirectory = Environment.CurrentDirectory
 
+        'phase 3
+
+
     End Sub
 
     'When the user has selected a database, the Generate Devices button becomes clickable.
@@ -62,7 +63,7 @@ Public Class Form1
             Provider:=Provider
         )
 
-        'Device_Database.Test()
+
     End Sub
 
 
@@ -83,7 +84,7 @@ Public Class Form1
         Device_ComboBox.DisplayMember = "Device_ID"
         Device_ComboBox.ValueMember = "Device_ID"
 
-        Device_ComboBox.SelectedIndex = 0
+
 
         Device_Panel.Visible = True
     End Sub
@@ -99,28 +100,69 @@ Public Class Form1
 
     End Sub
 
-    Private Function DisplayDevice(index As UInt128) As Boolean
+    Private Sub DisplayDevice(index As Integer)
 
         Dim DataTable = Device_Database.get_Device(index)
 
-        'if the datatable is empty, then the device does not exist
+        'if empty then it doesnt exist
         If DataTable.Rows.Count = 0 Then
-            Type_Output.ForeColor = Color.Red
-            Return False
-
+            Return
         End If
 
-        Type_Output.ForeColor = Color.Black
+
+
+
+        Dim Type_ID = DataTable.Rows(0)("DeviceType_ID")
+        Dim Brand_ID = DataTable.Rows(0)("Brand_ID")
+        Dim OS_ID = DataTable.Rows(0)("OS_ID")
 
         'loads the data into the textboxes
-        Type_Output.Text = DataTable.Rows(0)("DeviceType_ID")
-        Brand_Output.Text = DataTable.Rows(0)("Brand_ID")
-        OS_Output.Text = DataTable.Rows(0)("OS_ID")
+        Type_Output.Text = get_DeviceType(Type_ID)
+        Brand_Output.Text = get_Brand(Brand_ID)
+        OS_Output.Text = get_OS(OS_ID)
+
         IP_Output.Text = DataTable.Rows(0)("IP_Address")
         MAC_Output.Text = DataTable.Rows(0)("MAC_Address")
+    End Sub
 
-        Return True
-    End Function
+    Private Sub Purchase_btn_Click(sender As Object, e As EventArgs) Handles Purchase_btn.Click
+
+        Dim price As Integer
 
 
+        'to calculate the correct price
+        Select Case Type_Output.Text
+            Case "Desktop"
+                price = Cost.Desktop
+            Case "Laptop"
+                price = Cost.Laptop
+            Case "Smart Phone"
+                price = Cost.Smartphone
+            Case "Tablet"
+                price = Cost.Tablet
+        End Select
+
+        Dim Current_Device As New Device(
+           Type_Output.Text,
+            Brand_Output.Text,
+            OS_Output.Text,
+            price
+)
+
+        Dim purchase_info = Order.Purchase(Current_Device, price)
+
+
+        ToolTip.SetToolTip(CompleteOrder_btn, purchase_info)
+
+        MessageBox.Show("Purchased: " & Environment.NewLine & Current_Device.ToString)
+
+
+    End Sub
+
+    Private Sub CompleteOrder_btn_Click(sender As Object, e As EventArgs) Handles CompleteOrder_btn.Click
+
+        MessageBox.Show(Order.CompleteOrder() & " Devices Ordered")
+
+        ToolTip.SetToolTip(CompleteOrder_btn, "Order Complete")
+    End Sub
 End Class

@@ -7,12 +7,11 @@ Public Enum Cost
     Tablet = 450
 End Enum
 
-'the 1 class in project
+'the only class in project ; no public fields
 Public Class Device
 
     Private DeviceType, Brand, OS As String
-    Private Price As Cost
-
+    Private _Price As Cost
 
     Sub New(_DeviceType As String, _Brand As String, _OS As String, _Cost As Cost)
 
@@ -20,15 +19,18 @@ Public Class Device
         Brand = _Brand
         OS = _OS
 
-        Price = _Cost
+
+        _Price = _Cost
     End Sub
 
     Public Overrides Function ToString() As String
 
+
+        Dim price As Decimal = _Price
         Return $"Device: {DeviceType}
 Brand: {Brand}
 OS: {OS}
-Price: {Price}"
+Price: {price:c}"
     End Function
 
 
