@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\babum\\OneDrive - TOWSON UNIVERSITY\\College\\2023 to 2024 - Year 2\\Spring Semester 2\\CIS 265 - VISUAL BASIC PROGRAMMING\\CIS 265 - Midterm\\Midterm\\Midterm\\Midterm.vbproj",
+      "projectUniqueName": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Midterm\\Midterm\\Midterm\\Midterm.vbproj",
       "projectName": "Midterm",
-      "projectPath": "C:\\Users\\babum\\OneDrive - TOWSON UNIVERSITY\\College\\2023 to 2024 - Year 2\\Spring Semester 2\\CIS 265 - VISUAL BASIC PROGRAMMING\\CIS 265 - Midterm\\Midterm\\Midterm\\Midterm.vbproj",
+      "projectPath": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Midterm\\Midterm\\Midterm\\Midterm.vbproj",
       "packagesPath": "C:\\Users\\babum\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\babum\\OneDrive - TOWSON UNIVERSITY\\College\\2023 to 2024 - Year 2\\Spring Semester 2\\CIS 265 - VISUAL BASIC PROGRAMMING\\CIS 265 - Midterm\\Midterm\\Midterm\\obj\\",
+      "outputPath": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Midterm\\Midterm\\Midterm\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\babum\\AppData\\Roaming\\NuGet\\NuGet.Config",

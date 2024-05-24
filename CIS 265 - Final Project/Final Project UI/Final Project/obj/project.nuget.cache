@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "mRPi30i31iY1SY885+0qx4GjZDc/elId/9BJyOJZH9xYmoFt4SoPKogZpTrydv7FV1HN5ej6FSgWqpl9aPQ2TA==",
+  "dgSpecHash": "wB9gzu8M4iNy8ZGRiUfoMPpZdPFlqr4L3tBPTrR/c4uJF4R02j2sfSBzH16MrsuR3Y3axpe79TmFAvxPQmvHdQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\babum\\Downloads\\GITHUB CIS 265\\CIS 265 - Final Project\\Final Project UI\\Final Project\\Final Project.vbproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\babum\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\babum\\.nuget\\packages\\system.data.oledb\\8.0.0\\system.data.oledb.8.0.0.nupkg.sha512",
+    "C:\\Users\\babum\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\babum\\.nuget\\packages\\system.diagnostics.performancecounter\\8.0.0\\system.diagnostics.performancecounter.8.0.0.nupkg.sha512",
+    "C:\\Users\\babum\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -39,6 +39,8 @@ Partial Class Form1
         Type_Output = New TextBox()
         Type_Label = New Label()
         Device_Panel = New Panel()
+        CompleteOrder_btn = New Button()
+        Purchase_btn = New Button()
         Device_ComboBox = New ComboBox()
         Device_Label = New Label()
         Database_Panel.SuspendLayout()
@@ -106,7 +108,7 @@ Partial Class Form1
         Device_Groupbox.Controls.Add(Type_Label)
         Device_Groupbox.Location = New Point(12, 66)
         Device_Groupbox.Name = "Device_Groupbox"
-        Device_Groupbox.Size = New Size(471, 306)
+        Device_Groupbox.Size = New Size(333, 306)
         Device_Groupbox.TabIndex = 3
         Device_Groupbox.TabStop = False
         Device_Groupbox.Text = "Device Information"
@@ -193,6 +195,8 @@ Partial Class Form1
         ' 
         ' Device_Panel
         ' 
+        Device_Panel.Controls.Add(CompleteOrder_btn)
+        Device_Panel.Controls.Add(Purchase_btn)
         Device_Panel.Controls.Add(Device_ComboBox)
         Device_Panel.Controls.Add(Device_Groupbox)
         Device_Panel.Controls.Add(Device_Label)
@@ -201,12 +205,34 @@ Partial Class Form1
         Device_Panel.Size = New Size(608, 394)
         Device_Panel.TabIndex = 5
         ' 
+        ' CompleteOrder_btn
+        ' 
+        CompleteOrder_btn.BackColor = Color.Lime
+        CompleteOrder_btn.FlatStyle = FlatStyle.Flat
+        CompleteOrder_btn.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        CompleteOrder_btn.Location = New Point(399, 314)
+        CompleteOrder_btn.Name = "CompleteOrder_btn"
+        CompleteOrder_btn.Size = New Size(209, 80)
+        CompleteOrder_btn.TabIndex = 5
+        CompleteOrder_btn.Text = "COMPLETE ORDER"
+        CompleteOrder_btn.UseVisualStyleBackColor = False
+        ' 
+        ' Purchase_btn
+        ' 
+        Purchase_btn.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
+        Purchase_btn.Location = New Point(211, 6)
+        Purchase_btn.Name = "Purchase_btn"
+        Purchase_btn.Size = New Size(134, 34)
+        Purchase_btn.TabIndex = 4
+        Purchase_btn.Text = "PURCHASE"
+        Purchase_btn.UseVisualStyleBackColor = False
+        ' 
         ' Device_ComboBox
         ' 
         Device_ComboBox.FormattingEnabled = True
         Device_ComboBox.Location = New Point(99, 7)
         Device_ComboBox.Name = "Device_ComboBox"
-        Device_ComboBox.Size = New Size(198, 33)
+        Device_ComboBox.Size = New Size(93, 33)
         Device_ComboBox.TabIndex = 1
         ' 
         ' Device_Label
@@ -226,7 +252,7 @@ Partial Class Form1
         Controls.Add(Device_Panel)
         Controls.Add(Database_Panel)
         Name = "Form1"
-        Text = "Form1"
+        Text = "Final Project"
         Database_Panel.ResumeLayout(False)
         Database_Panel.PerformLayout()
         Device_Groupbox.ResumeLayout(False)
@@ -255,5 +281,7 @@ Partial Class Form1
     Friend WithEvents IP_Label As Label
     Friend WithEvents MAC_Output As TextBox
     Friend WithEvents MAC_Label As Label
+    Friend WithEvents Purchase_btn As Button
+    Friend WithEvents CompleteOrder_btn As Button
 
 End Class

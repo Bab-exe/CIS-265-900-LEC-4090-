@@ -284,7 +284,7 @@ Subtotal: {Tablet_Subtotal.ToString("C")}")
 
 
     'for the random part
-    Class Generate
+    Module Generate
         Private ReadOnly random As New Random()
 
         'Device Properties that arent dependent on type ; Brand and OS cant be here
@@ -504,7 +504,7 @@ Subtotal: {Tablet_Subtotal.ToString("C")}")
 
             End Get
         End Property
-    End Class
+        End Class
 
 
-End Module
+    End Module
