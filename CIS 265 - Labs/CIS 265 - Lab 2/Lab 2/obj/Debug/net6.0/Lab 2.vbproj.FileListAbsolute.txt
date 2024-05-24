@@ -1,0 +1,14 @@
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\bin\Debug\net6.0\Lab 2.exe
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\bin\Debug\net6.0\Lab 2.deps.json
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\bin\Debug\net6.0\Lab 2.runtimeconfig.json
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\bin\Debug\net6.0\Lab 2.dll
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\bin\Debug\net6.0\Lab 2.pdb
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\Lab 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\Lab 2.AssemblyInfoInputs.cache
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\Lab 2.AssemblyInfo.vb
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\Lab 2.vbproj.CoreCompileInputs.cache
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\Lab 2.dll
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\refint\Lab 2.dll
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\Lab 2.pdb
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\Lab 2.genruntimeconfig.cache
+C:\Users\babum\OneDrive - TOWSON UNIVERSITY\College\2023 to 2024 - Year 2\Spring Semester 2\CIS 265 - VISUAL BASIC PROGRAMMING\CIS 265 - Labs\CIS 265 - Lab 2\Lab 2\obj\Debug\net6.0\ref\Lab 2.dll

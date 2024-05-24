@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\babum\\OneDrive - TOWSON UNIVERSITY\\College\\2023 to 2024 - Year 2\\Spring Semester 2\\CIS 265 - VISUAL BASIC PROGRAMMING\\CIS 265 - Labs\\CIS 265 - Lab 2\\Lab 2\\Lab 2.vbproj": {}
+  },
+  "projects": {
+    "C:\\Users\\babum\\OneDrive - TOWSON UNIVERSITY\\College\\2023 to 2024 - Year 2\\Spring Semester 2\\CIS 265 - VISUAL BASIC PROGRAMMING\\CIS 265 - Labs\\CIS 265 - Lab 2\\Lab 2\\Lab 2.vbproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\babum\\OneDrive - TOWSON UNIVERSITY\\College\\2023 to 2024 - Year 2\\Spring Semester 2\\CIS 265 - VISUAL BASIC PROGRAMMING\\CIS 265 - Labs\\CIS 265 - Lab 2\\Lab 2\\Lab 2.vbproj",
+        "projectName": "Lab 2",
+        "projectPath": "C:\\Users\\babum\\OneDrive - TOWSON UNIVERSITY\\College\\2023 to 2024 - Year 2\\Spring Semester 2\\CIS 265 - VISUAL BASIC PROGRAMMING\\CIS 265 - Labs\\CIS 265 - Lab 2\\Lab 2\\Lab 2.vbproj",
+        "packagesPath": "C:\\Users\\babum\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\babum\\OneDrive - TOWSON UNIVERSITY\\College\\2023 to 2024 - Year 2\\Spring Semester 2\\CIS 265 - VISUAL BASIC PROGRAMMING\\CIS 265 - Labs\\CIS 265 - Lab 2\\Lab 2\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\babum\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
